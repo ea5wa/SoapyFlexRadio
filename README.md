@@ -29,7 +29,7 @@ SoapyFlexRadio.dll   ←── UDP 5900 (Float32 LE, IQ raw)
 ```powershell
 cd SoapyFlexRadio2
 mkdir build && cd build
-cmake .. -G "Visual Studio 17 2022" -A x64 -DCMAKE_PREFIX_PATH="C:/Program Files/PothosSDR"
+cmake .. -G "Visual Studio 18 2026" -A x64 -DCMAKE_PREFIX_PATH="C:/Program Files/PothosSDR"
 cmake --build . --config Release
 cmake --install . --config Release
 ```
