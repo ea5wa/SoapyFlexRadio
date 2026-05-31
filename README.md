@@ -18,7 +18,7 @@ SoapyFlexRadio.dll   ←── UDP 5900 (Float32 LE, IQ raw)
 
 - Windows 10/11 x64
 - [PothosSDR](http://downloads.myriadrf.org/builds/PothosSDR/?C=M;O=D) instalado
-- [smartsdr-iqtransfer.exe](https://github.com/hb9fxq/flexlib-go/releases/tag/Nov2020)
+- [smartsdr-iqtransfer.exe](https://github.com/hb9fxq/flexlib-go/releases/tag/Nov2020) instalado
 - SmartSDR corriendo y conectado al FLEX-6600
 - SkyRoof (VE3NEA)
 
