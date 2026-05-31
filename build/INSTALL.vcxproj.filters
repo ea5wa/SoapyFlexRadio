@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\reigc\Downloads\SoapyFlexRadio2\SoapyFlexRadio2\build\CMakeFiles\c563923189bb865ff60c0489a2247431\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{D78881EE-3166-329A-B16D-867861C095E0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

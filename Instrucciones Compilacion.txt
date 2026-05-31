@@ -1,0 +1,28 @@
+cd C:\Users\reigc\Downloads\SoapyFlexRadio2\SoapyFlexRadio2
+mkdir build
+cd build
+cmake .. -G "Visual Studio 18 2026" -A x64 -DCMAKE_PREFIX_PATH="C:/Program Files/PothosSDR"
+cmake --build . --config Release
+
+copy "build\Release\SoapyFlexRadio.dll" "C:\Program Files\PothosSDR\lib\SoapySDR\modules0.8\"
+
+
+Para Iniciar:
+
+1 - Arrancar smartSDR o aethersdr
+
+2 - Arrancar smartsdr-iqtransfer desde CMD:
+
+	cd C:\Users\reigc\Downloads\flexlib-go.NOV-2020\flexlib-go\Win64
+	.\smartsdr-iqtransfer.exe --RADIO=192.168.0.208 --MYUDP=5999 --RATE=192000 --CH=1 --FWD=127.0.0.1:5901
+
+3 - Iniciar Hamlib para el rotor
+
+	C:\hamlib\bin\rotctld.exe -m 3 -r 192.168.0.50:4533
+
+
+4 - Iniciar Skyroof
+
+
+
+

@@ -1,0 +1,3 @@
+LIBRARY SoapyFlexRadio
+EXPORTS
+    SoapyFlexRadio_getVersion

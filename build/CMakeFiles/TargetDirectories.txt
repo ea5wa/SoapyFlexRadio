@@ -1,0 +1,4 @@
+C:/Users/reigc/Downloads/SoapyFlexRadio2/SoapyFlexRadio2/build/CMakeFiles/SoapyFlexRadio.dir
+C:/Users/reigc/Downloads/SoapyFlexRadio2/SoapyFlexRadio2/build/CMakeFiles/INSTALL.dir
+C:/Users/reigc/Downloads/SoapyFlexRadio2/SoapyFlexRadio2/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/reigc/Downloads/SoapyFlexRadio2/SoapyFlexRadio2/build/CMakeFiles/ZERO_CHECK.dir

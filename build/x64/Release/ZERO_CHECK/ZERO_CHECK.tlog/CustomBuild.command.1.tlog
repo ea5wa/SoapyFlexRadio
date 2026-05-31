@@ -1,0 +1,10 @@
+^C:\USERS\REIGC\DOWNLOADS\SOAPYFLEXRADIO2\SOAPYFLEXRADIO2\BUILD\CMAKEFILES\C563923189BB865FF60C0489A2247431\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/reigc/Downloads/SoapyFlexRadio2/SoapyFlexRadio2 -BC:/Users/reigc/Downloads/SoapyFlexRadio2/SoapyFlexRadio2/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/reigc/Downloads/SoapyFlexRadio2/SoapyFlexRadio2/build/SoapyFlexRadio.slnx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
