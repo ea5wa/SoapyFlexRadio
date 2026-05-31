@@ -120,7 +120,7 @@ class ClientHandler(threading.Thread):
 
         # Leer banner inicial de SmartSDR CAT y reenviarlo a SkyRoof
         try:
-            self.cat_sock.settimeout(0.5)
+            self.cat_sock.settimeout(1.0)
             banner = self.cat_sock.recv(4096)
             if banner:
                 self.client.sendall(banner)
@@ -137,8 +137,11 @@ class ClientHandler(threading.Thread):
                     data = self.cat_sock.recv(4096)
                     if not data:
                         break
-                    self.client.sendall(data)
-                    log.debug(f"CAT→SkyRoof: {data.decode(errors='replace').strip()}")
+                    try:
+                        self.client.sendall(data)
+                        log.debug(f"CAT→SkyRoof: {data.decode(errors='replace').strip()}")
+                    except:
+                        break
             except:
                 pass
 
@@ -148,8 +151,13 @@ class ClientHandler(threading.Thread):
         # Leer comandos de SkyRoof y procesarlos
         buf = ""
         try:
+            self.client.settimeout(30.0)  # timeout generoso para no cortar entre pasos
             while True:
-                data = self.client.recv(4096)
+                try:
+                    data = self.client.recv(4096)
+                except socket.timeout:
+                    # Timeout esperando datos — mantener conexión viva
+                    continue
                 if not data:
                     break
                 buf += data.decode(errors="replace")
@@ -169,7 +177,10 @@ class ClientHandler(threading.Thread):
                         log.warning(f"Error reenviando a CAT: {e}")
                         self.cat_sock = self.connect_cat()
                         if self.cat_sock:
-                            self.cat_sock.sendall(cmd.encode())
+                            try:
+                                self.cat_sock.sendall(cmd.encode())
+                            except:
+                                pass
 
                     # Si es un comando FA (set frequency), mover también el panadaptador
                     m = re.match(r"FA(\d{11});", cmd.strip())
