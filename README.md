@@ -1,4 +1,4 @@
-# SoapyFlexRadio v2 — Plugin SoapySDR para FlexRadio 6600
+# SoapyFlexRadio — Plugin SoapySDR para FlexRadio 6600
 
 Primer intento de DLL para utilizar el Flex6600 como dispositivo SDR en el software SkyRoof de VE3NEA. Versión simplificada que usa **smartsdr-iqtransfer** de HB9FXQ como puente a la radio.
 
